@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "maydayo personal blog",
+
+  "compilerOptions": {
+    // JavaScript Engine
+    "lib": ["es2020"],
+    "module": "commonjs",
+    "target": "es2020",
+
+    // Rules
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+
+    // Build Path
+    "outDir": "./dist",
+
+    // Path Mapping
+    "baseUrl": "./",
+    "paths": {
+      "@midnight/*": ["src/*"]
+    },
+    "plugins": [
+      {
+        "transform": "@zerollup/ts-transform-paths",
+        "exclude": ["*"]
+      }
+    ]
+  }
+}
